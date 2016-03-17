@@ -1,23 +1,24 @@
 //business logic
 //object that stores daily tasks
-function dailyTask(day, chores, appointments, dinner) {
-  this.day = day-of-the-week;
-  this.chores = chores;
-  this.appointments = appointments;
-  this.dinner = dinner;
+function Food(userInput) {
+  this.groceries = groceries;
 }
 
-
+Food.prototype.item = function () {
+  return this.groceries;
+}
 //user logic
 //store user input value
 
 $(document).ready(function() {
-  $("form#items").sumbit(function(event){
+  $("form#groceries").sumbit(function(event){
     event.preventDefault();
-    var newItem = $("input#new-item").val();
+    var userInput = $("input#new-item").val();
+
+    var newItem = new Food(groceries);
 
 
-    $("itemized-list").append("<li><span class='newItem'" + newItem.__() "</span></li")
+    $("itemized-list").append("<li><span class='food-item'" + newItem.item() "</span></li")
 
   });
 });
